@@ -18,7 +18,7 @@ echo $USERNAME > credentials
 echo $PASSWORD >> credentials
 
 echo 'Credentials file created!'
-echo 'Now run ./proxy.sh start'
+echo 'Now run proxy start'
 
 pwd=$(pwd)
 sudo ln -sf $pwd/proxy.sh /usr/local/bin/proxy
