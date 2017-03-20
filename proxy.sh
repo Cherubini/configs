@@ -67,6 +67,9 @@ start_gnome()
 {
 	gsettings set org.gnome.system.proxy mode auto
 	gsettings set org.gnome.system.proxy autoconfig-url $PROXY_PAC
+  gsettings set org.gnome.system.proxy ignore-hosts ['localhost', '127.0.0.0/8', '*.sjk.emb', '::1', '10.5.2.*', '*.embraer.com.br']
+  gsettings set org.gnome.system.proxy.http authentication-user $USER
+  gsettings set org.gnome.system.proxy.http authentication-password $PASS
 }
 
 stop_gnome()
