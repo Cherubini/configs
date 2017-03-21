@@ -72,11 +72,6 @@ start_gnome()
   gsettings set org.gnome.system.proxy.http authentication-password $PASS
 }
 
-credentials
-start_gnome
-echo "ABC"
-exit
-
 stop_gnome()
 {
 	gsettings set org.gnome.system.proxy mode none
