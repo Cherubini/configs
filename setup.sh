@@ -21,5 +21,12 @@ echo 'Credentials file created!'
 echo 'Now run proxy start'
 
 pwd=$(pwd)
-sudo ln -sf $pwd/proxy.sh /usr/local/bin/proxy
-sudo chmod +x /usr/local/bin/proxy
+
+sudo tee -a proxy \
+<<EOF
+#!/bin/bash
+cd $pwd && ./proxy.sh start
+EOF
+
+sudo chmod +x proxy
+sudo mv proxy /usr/local/bin/proxy

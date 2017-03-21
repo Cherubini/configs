@@ -65,12 +65,22 @@ backup_file()
 #-------------------- Gnome --------------------
 start_gnome()
 {
+  echo '1'
 	gsettings set org.gnome.system.proxy mode auto
+  echo '2'
 	gsettings set org.gnome.system.proxy autoconfig-url $PROXY_PAC
-  gsettings set org.gnome.system.proxy ignore-hosts ['localhost', '127.0.0.0/8', '*.sjk.emb', '::1', '10.5.2.*', '*.embraer.com.br']
+  echo '3'
+  gsettings set org.gnome.system.proxy ignore-hosts "['localhost', '127.0.0.0/8', '*.sjk.emb', '::1', '10.5.2.*', '*.embraer.com.br']"
+  echo '4'
   gsettings set org.gnome.system.proxy.http authentication-user $USER
+  echo '5'
   gsettings set org.gnome.system.proxy.http authentication-password $PASS
 }
+
+credentials
+start_gnome
+echo "ABC"
+exit
 
 stop_gnome()
 {
