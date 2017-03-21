@@ -25,7 +25,7 @@ pwd=$(pwd)
 sudo tee -a proxy \
 <<EOF
 #!/bin/bash
-cd $pwd && ./proxy.sh start
+cd $pwd && ./proxy.sh \$1
 EOF
 
 sudo chmod +x proxy
