@@ -161,8 +161,6 @@ stop_git()
 #-------------------- Node --------------------
 start_node()
 {
-	sudo npm config set proxy http://$USER:$PASS@$HTTP_PROXY_HOST:$HTTP_PROXY_PORT/
-	sudo npm config set https-proxy http://$USER:$PASS@$HTTP_PROXY_HOST:$HTTP_PROXY_PORT/
 	npm config set proxy http://$USER:$PASS@$HTTP_PROXY_HOST:$HTTP_PROXY_PORT/
 	npm config set https-proxy http://$USER:$PASS@$HTTP_PROXY_HOST:$HTTP_PROXY_PORT/
 }
