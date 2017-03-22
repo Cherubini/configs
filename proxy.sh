@@ -183,7 +183,7 @@ start_bower()
 <<EOF
 {
   "proxy": "http://$USER:$PASS@$HTTP_PROXY_HOST:$HTTP_PROXY_PORT",
-  "https-proxy":"http://$USER:$PASS@$HTTP_PROXY_HOST:$HTTP_PROXY_PORT",
+  "https-proxy":"http://$USER:$PASS@$HTTP_PROXY_HOST:$HTTP_PROXY_PORT"
 }
 EOF
 }
